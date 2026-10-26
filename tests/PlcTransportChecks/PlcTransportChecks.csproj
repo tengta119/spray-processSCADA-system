@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IoTClientPath Condition="Exists('../../Yale.SprayProcessSCADASystem/bin/Debug/net10.0-windows/IoTClient.dll')">../../Yale.SprayProcessSCADASystem/bin/Debug/net10.0-windows/IoTClient.dll</IoTClientPath>
+    <IoTClientPath Condition="'$(IoTClientPath)' == ''">../../Yale.SprayProcessSCADASystem/bin/Debug/net6.0-windows7.0/IoTClient.dll</IoTClientPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IoTClient"><HintPath>$(IoTClientPath)</HintPath></Reference>
+    <Compile Include="../../Yale.SprayProcessSCADASystem/Communication/*.cs" Link="Communication/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

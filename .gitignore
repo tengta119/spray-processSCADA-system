@@ -1,0 +1,77 @@
+# .NET / MSBuild output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Aa]rtifacts/
+[Pp]ublish/
+packages/
+*.nupkg
+*.snupkg
+
+# Visual Studio, Rider and local editor settings
+.vs/
+.idea/
+.vscode/
+*.suo
+*.user
+*.rsuser
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Runtime logs and local SQLite data
+[Ll]ogs/
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3-shm
+*.sqlite3-wal
+
+# Generated test results and exports
+[Tt]est[Rr]esults/
+coverage/
+coverage.*
+*.coverage
+*.coveragexml
+/outputs/
+BenchmarkDotNet.Artifacts/
+
+# Python / Node tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+
+# Local secrets and certificates
+.env
+.env.*
+!.env.example
+!.env.sample
+appsettings.Local.json
+appsettings.*.local.json
+*.pfx
+*.p12
+*.pem
+*.key
+*.snk
+
+# OS / temporary files
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.bak
+*.orig
+*~
+
+# appsettings.json, config.ini and PLC *.xlsx files are required defaults;
+# keep those source files tracked. Runtime copies are excluded under bin/.
